@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 04, 2017 at 07:57 PM
+-- Generation Time: Mar 04, 2017 at 08:02 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -1487,7 +1487,8 @@ INSERT INTO `oc_manufacturer` (`manufacturer_id`, `name`, `image`, `sort_order`)
 (7, 'Hewlett-Packard', 'catalog/demo/hp_logo.jpg', 0),
 (8, 'Apple', 'catalog/demo/apple_logo.jpg', 0),
 (9, 'Canon', 'catalog/demo/canon_logo.jpg', 0),
-(10, 'Sony', 'catalog/demo/sony_logo.jpg', 0);
+(10, 'Sony', 'catalog/demo/sony_logo.jpg', 0),
+(11, 'Новый производитель', 'catalog/1313694082.7066_m.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -1510,7 +1511,8 @@ INSERT INTO `oc_manufacturer_to_store` (`manufacturer_id`, `store_id`) VALUES
 (7, 0),
 (8, 0),
 (9, 0),
-(10, 0);
+(10, 0),
+(11, 0);
 
 -- --------------------------------------------------------
 
@@ -3160,7 +3162,8 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (885, 'affiliate/transaction', 'affiliate-transaction'),
 (886, 'affiliate/account', 'affiliates'),
 (887, 'category_id=59', 'nazvanie-kategorii'),
-(895, 'product_id=50', 'testovyj-tovar');
+(895, 'product_id=50', 'testovyj-tovar'),
+(896, 'manufacturer_id=11', 'novyj-proizvoditel');
 
 -- --------------------------------------------------------
 
@@ -4575,7 +4578,7 @@ ALTER TABLE `oc_location`
 -- AUTO_INCREMENT for table `oc_manufacturer`
 --
 ALTER TABLE `oc_manufacturer`
-  MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `oc_marketing`
 --
@@ -4775,7 +4778,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=896;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=897;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
