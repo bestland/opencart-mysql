@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 04, 2017 at 08:08 PM
+-- Generation Time: Mar 04, 2017 at 08:10 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -204,7 +204,9 @@ INSERT INTO `oc_attribute` (`attribute_id`, `attribute_group_id`, `sort_order`) 
 (8, 3, 5),
 (9, 3, 6),
 (10, 3, 7),
-(11, 3, 8);
+(11, 3, 8),
+(12, 7, 0),
+(13, 7, 0);
 
 -- --------------------------------------------------------
 
@@ -233,7 +235,9 @@ INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) V
 (9, 1, 'test 6'),
 (10, 1, 'test 7'),
 (11, 1, 'test 8'),
-(3, 1, 'Clockspeed');
+(3, 1, 'Clockspeed'),
+(12, 1, 'Color'),
+(13, 1, 'Model');
 
 -- --------------------------------------------------------
 
@@ -4405,7 +4409,7 @@ ALTER TABLE `oc_api_session`
 -- AUTO_INCREMENT for table `oc_attribute`
 --
 ALTER TABLE `oc_attribute`
-  MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `oc_attribute_group`
 --
