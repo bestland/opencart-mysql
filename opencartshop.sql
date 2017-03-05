@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 05, 2017 at 03:49 PM
+-- Generation Time: Mar 05, 2017 at 03:56 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -764,7 +764,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2014-09-09 12:27:55');
+(1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2017-03-05 15:52:49');
 
 -- --------------------------------------------------------
 
@@ -1139,6 +1139,15 @@ CREATE TABLE `oc_filter` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `oc_filter`
+--
+
+INSERT INTO `oc_filter` (`filter_id`, `filter_group_id`, `sort_order`) VALUES
+(1, 1, 0),
+(2, 1, 0),
+(3, 1, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -1152,6 +1161,15 @@ CREATE TABLE `oc_filter_description` (
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `oc_filter_description`
+--
+
+INSERT INTO `oc_filter_description` (`filter_id`, `language_id`, `filter_group_id`, `name`) VALUES
+(1, 1, 1, 'Levis'),
+(2, 1, 1, 'Tom Tailor'),
+(3, 1, 1, 'Adidas');
+
 -- --------------------------------------------------------
 
 --
@@ -1162,6 +1180,13 @@ CREATE TABLE `oc_filter_group` (
   `filter_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_filter_group`
+--
+
+INSERT INTO `oc_filter_group` (`filter_group_id`, `sort_order`) VALUES
+(1, 0);
 
 -- --------------------------------------------------------
 
@@ -1174,6 +1199,13 @@ CREATE TABLE `oc_filter_group_description` (
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_filter_group_description`
+--
+
+INSERT INTO `oc_filter_group_description` (`filter_group_id`, `language_id`, `name`) VALUES
+(1, 1, 'Производитель');
 
 -- --------------------------------------------------------
 
@@ -3158,7 +3190,7 @@ CREATE TABLE `oc_user` (
 --
 
 INSERT INTO `oc_user` (`user_id`, `user_group_id`, `username`, `password`, `salt`, `firstname`, `lastname`, `email`, `image`, `code`, `ip`, `status`, `date_added`) VALUES
-(1, 1, 'admin', '68637153da15af1eeb59bb6cc6385faa8483b4d6', '3zvPdsaUb', 'John', 'Doe', 'seodegustator@gmail.com', '', '', '', 1, '2017-03-05 17:48:23');
+(1, 1, 'admin', '68637153da15af1eeb59bb6cc6385faa8483b4d6', '3zvPdsaUb', 'John', 'Doe', 'seodegustator@gmail.com', '', '', '127.0.0.1', 1, '2017-03-05 17:48:23');
 
 -- --------------------------------------------------------
 
@@ -4494,12 +4526,12 @@ ALTER TABLE `oc_extension`
 -- AUTO_INCREMENT for table `oc_filter`
 --
 ALTER TABLE `oc_filter`
-  MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `filter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `oc_filter_group`
 --
 ALTER TABLE `oc_filter_group`
-  MODIFY `filter_group_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `filter_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_geo_zone`
 --
